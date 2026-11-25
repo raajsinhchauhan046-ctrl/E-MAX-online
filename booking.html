@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-MAX | Pre Booking</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">E-MAX</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="services">
+  <div class="section-title">
+    <span>E-MAX CYBER CAFE</span>
+    <h2>Pre-Book Your Visit</h2>
+    <p>Save your time. Book your service today!</p>
+  </div>
+
+  <form id="bookingForm" class="service-card">
+    <p>Your Name</p>
+    <input name="name" placeholder="Enter your name" required>
+
+    <p>Mobile Number</p>
+    <input name="mobile" type="tel" placeholder="Mobile number" required>
+
+    <p>Select Service</p>
+    <select name="service" required>
+      <option value="">Choose service</option>
+      <option>Aadhaar Services</option>
+      <option>PAN Card</option>
+      <option>Voter ID</option>
+      <option>Driving Licence</option>
+      <option>Scholarship</option>
+      <option>Banking</option>
+      <option>Other</option>
+    </select>
+
+    <p>Preferred Date</p>
+    <input name="date" type="date" required>
+
+    <br><br>
+    <button class="btn" type="submit">
+      Confirm Booking ↗
+    </button>
+  </form>
+</section>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const f = new FormData(this);
+
+  const message =
+    "Hello E-MAX! Booking Request\n" +
+    "Name: " + f.get("name") + "\n" +
+    "Mobile: " + f.get("mobile") + "\n" +
+    "Service: " + f.get("service") + "\n" +
+    "Date: " + f.get("date");
+
+  window.open(
+    "https://wa.me/919099212666?text=" +
+    encodeURIComponent(message),
+    "_blank"
+  );
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Services | E-MAX Cyber Cafe</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050b18;
+    color: white;
+}
+
+header {
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #09152a;
+    border-bottom: 1px solid #00d9ff44;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00d9ff;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #00d9ff;
+}
+
+.hero {
+    text-align: center;
+    padding: 90px 20px 60px;
+    background: radial-gradient(circle, #12345a, #050b18 70%);
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 55px);
+    color: #00d9ff;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #b8c9df;
+    line-height: 1.7;
+}
+
+.services {
+    padding: 60px 7%;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.services h2 span {
+    color: #00d9ff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: #0d1b30;
+    border: 1px solid #173957;
+    border-radius: 16px;
+    padding: 28px 22px;
+    transition: .3s;
+    animation: appear .7s ease both;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #00d9ff;
+    box-shadow: 0 0 22px #00d9ff33;
+}
+
+.card .emoji {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    color: #00d9ff;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #b8c9df;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 18px;
+    background: #00d9ff;
+    color: #04101e;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.btn:hover {
+    background: white;
+}
+
+.cta {
+    margin: 30px 7% 70px;
+    padding: 45px 20px;
+    text-align: center;
+    background: linear-gradient(120deg, #09233e, #102e4c);
+    border: 1px solid #00d9ff55;
+    border-radius: 18px;
+}
+
+.cta h2 {
+    color: #00d9ff;
+    margin-bottom: 12px;
+}
+
+.cta p {
+    color: #c5d4e6;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #09152a;
+    color: #9eb3ca;
+    font-size: 13px;
+}
+
+footer a {
+    color: #00d9ff;
+    text-decoration: none;
+}
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #20c96b;
+    color: white;
+    text-decoration: none;
+    padding: 14px 19px;
+    border-radius: 40px;
+    font-weight: bold;
+    box-shadow: 0 0 18px #20c96b66;
+    z-index: 200;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav a {
+        margin: 0 7px;
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">E-MAX</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Booking</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Our Digital Services</h1>
+    <p>One Place. Multiple Digital Solutions.</p>
+    <p>Explore our digital assistance and documentation services.</p>
+</section>
+
+<section class="services" id="all-services">
+    <h2>Explore <span>All Services</span></h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="emoji">🪪</div>
+            <h3>PAN Card Services</h3>
+            <p>PAN application guidance, correction assistance and related documentation.</p>
+            <a class="btn" href="https://wa.me/919099212666?text=I%20need%20PAN%20card%20service">Enquire Now</a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🆔</div>
+            <h3>Aadhaar Assistance</h3>
+            <p>Guidance for eligible Aadhaar-related services and authorised centre information.</p>
+            <a class="btn" href="https://wa.me/919099212666?text=I%20need%20Aadhaar%20assistance">Enquire Now</a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🚗</div>
+            <h3>Driving Licence</h3>
+            <p>Learning licence, driving licence application guidance and form assistance.</p>
+            <a class="btn" href="https://wa.me/919099212666?text=I%20need%20Driving%20Licence%20assistance">Enquire Now</a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🎓</div>
+            <h3>Scholarship Forms</h3>
+            <p>Online scholarship applications, document preparation and form filling assistance.</p>
+            <a class="btn" href="https://wa.me/919099212666?text=I%20need%20Scholarship%20form%20assistance">Enquire Now</a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🗳️</div>
+            <h3>Voter ID Services</h3>
+            <p>Voter registration guidance, correction and election card application assistance.</p>
+            <a class="btn" href="https://wa.me/919099212666?text=I%20need%20Voter%20ID%20assistance">Enquire Now</a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🏦</div>
+            <h3>Banking Assistance</h3>
+            <p>General banking form assistance and guidance for available banking services.</p>
+            <a class="btn" href="https://wa.me/919099212666?text=I%20need%20Banking%20assistance">Enquire Now</a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🖨️</div>
+            <h3>Printing & Xerox</h3>
+            <p>Document printing, photocopy, scanning and related services.</p>
+            <a class="btn" href="https://wa.me/919099212666?text=I%20need%20Printing%20service">Enquire Now</a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">📄</div>
+            <h3>Online Form Filling</h3>
+            <p>Online applications, registrations and general form filling assistance.</p>
+            <a class="btn" href="https://wa.me/919099212666?text=I%20need%20Online%20Form%20assistance">Enquire Now</a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">📑</div>
+            <h3>Resume & Documentation</h3>
+            <p>Resume creation, document formatting and typing assistance.</p>
+            <a class="btn" href="https://wa.me/919099212666?text=I%20need%20Resume%20service">Enquire Now</a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">💻</div>
+            <h3>Computer Services</h3>
+            <p>Basic computer assistance, internet browsing and digital documentation.</p>
+            <a class="btn" href="https://wa.me/919099212666?text=I%20need%20Computer%20service">Enquire Now</a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">📸</div>
+            <h3>Photo & Scanning</h3>
+            <p>Document scanning and digital photo/document preparation.</p>
+            <a class="btn" href="https://wa.me/919099212666?text=I%20need%20Photo%20or%20Scanning%20service">Enquire Now</a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🌐</div>
+            <h3>Other Digital Services</h3>
+            <p>Need help with another online service? Contact us to check availability.</p>
+            <a class="btn" href="https://wa.me/919099212666?text=I%20want%20to%20ask%20about%20other%20services">Enquire Now</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Need Any Digital Service?</h2>
+    <p>Contact E-MAX Cyber Cafe and get assistance with your work.</p>
+    <a class="btn" href="https://wa.me/919099212666?text=Hello%20E-MAX%2C%20I%20need%20help">Contact on WhatsApp</a>
+</section>
+
+<footer>
+    <p>© 2026 E-MAX Cyber Cafe. All Rights Reserved.</p>
+    <p>One Place. Multiple Digital Solutions.</p>
+    <p>Phone: <a href="tel:+919099212666">9099212666</a></p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919099212666" target="_blank">WhatsApp</a>
+
+</body>
+</html>

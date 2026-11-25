@@ -4,125 +4,692 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>E-MAX Cyber Cafe | Digital Services</title>
-<link rel="stylesheet" href="styles.css">
+
+<meta name="description" content="E-MAX Cyber Cafe provides online form assistance, PAN, Aadhaar guidance, scholarships, driving licence, printing and digital services.">
+<meta name="theme-color" content="#050b18">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050b18;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+header {
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(5, 15, 32, 0.96);
+    border-bottom: 1px solid #00d9ff33;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 900;
+    color: #00d9ff;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px #00d9ff88;
+}
+
+.logo span {
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d7e5f5;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #00d9ff;
+}
+
+.nav-btn {
+    background: #00d9ff;
+    color: #06101e !important;
+    padding: 11px 17px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+    radial-gradient(circle at 80% 40%, #063b5b88, transparent 35%),
+    linear-gradient(120deg, #071326, #050b18);
+}
+
+.hero-content {
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1s ease;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: #00d9ff;
+    border: 1px solid #00d9ff66;
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 75px);
+    line-height: 1.12;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #00d9ff;
+    text-shadow: 0 0 25px #00d9ff55;
+}
+
+.hero p {
+    color: #b7c8dd;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #00d9ff;
+    color: #03101c;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: .3s;
+    border: 1px solid #00d9ff;
+}
+
+.btn:hover {
+    background: white;
+    border-color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 0 22px #00d9ff66;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #00d9ff;
+}
+
+.hero-glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: #00d9ff;
+    filter: blur(180px);
+    opacity: .18;
+    right: 8%;
+    top: 20%;
+    animation: pulse 5s infinite alternate;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 75px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 5vw, 40px);
+    margin-bottom: 14px;
+}
+
+.section-heading h2 span {
+    color: #00d9ff;
+}
+
+.section-heading p {
+    color: #aebfd3;
+    line-height: 1.7;
+}
+
+/* ABOUT */
+
+.about {
+    background: #081426;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content p {
+    color: #b7c8dd;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+/* SERVICES */
+
+.services {
+    background: #050b18;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.service-card {
+    background: linear-gradient(145deg, #10223b, #091426);
+    padding: 28px 23px;
+    border-radius: 15px;
+    border: 1px solid #173957;
+    transition: .35s;
+}
+
+.service-card:hover {
+    transform: translateY(-9px);
+    border-color: #00d9ff;
+    box-shadow: 0 0 25px #00d9ff22;
+}
+
+.service-icon {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    color: #00d9ff;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #afc1d6;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* WHY US */
+
+.why {
+    background: #081426;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+}
+
+.why-card {
+    padding: 27px;
+    text-align: center;
+    background: #10223b;
+    border: 1px solid #173957;
+    border-radius: 12px;
+}
+
+.why-card h3 {
+    color: #00d9ff;
+    margin: 13px 0;
+}
+
+.why-card p {
+    color: #b7c8dd;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* CTA */
+
+.cta {
+    margin: 70px 8%;
+    padding: 60px 25px;
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(120deg, #092744, #103d60);
+    border: 1px solid #00d9ff66;
+}
+
+.cta h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.cta h2 span {
+    color: #00d9ff;
+}
+
+.cta p {
+    color: #c4d4e7;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 45px 8% 25px;
+    background: #030914;
+    border-top: 1px solid #00d9ff33;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+footer h3 {
+    color: #00d9ff;
+    margin-bottom: 17px;
+}
+
+footer p, footer a {
+    color: #aebfd3;
+    font-size: 14px;
+    line-height: 2;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #00d9ff;
+}
+
+.copyright {
+    border-top: 1px solid #ffffff18;
+    padding-top: 20px;
+    text-align: center;
+    color: #8294aa;
+    font-size: 13px;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2000;
+    background: #20c96b;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 20px #20c96b66;
+    transition: .3s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.08);
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    from { opacity: .1; transform: scale(.8); }
+    to { opacity: .3; transform: scale(1.2); }
+}
+
+/* MOBILE */
+
+@media(max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+        padding: 17px 5%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 80px 7%;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .cta {
+        margin: 50px 5%;
+    }
+
+    .cta h2 {
+        font-size: 28px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <a href="index.html" class="logo">
-    <span>E</span> MAX
-    <small>CYBER CAFE</small>
-  </a>
+<!-- NAVIGATION -->
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="booking.html">Pre-booking</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header>
+    <div class="logo">E<span>-</span>MAX</div>
+
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./services.html">Services</a>
+        <a href="./booking.html">Booking</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./booking.html" class="nav-btn">Book Now</a>
+    </nav>
 </header>
 
+<!-- HERO SECTION -->
+
 <section class="hero">
-  <div class="hero-content">
-    <span class="tag">WELCOME TO E-MAX</span>
 
-    <h1>
-      Your Digital World.<br>
-      <span>Our Responsibility.</span>
-    </h1>
+    <div class="hero-glow"></div>
 
-    <p>
-      From online applications to digital documentation,
-      banking assistance and student services —
-      everything at one place.
-    </p>
+    <div class="hero-content">
 
-    <a href="booking.html" class="btn">Book Your Visit ↗</a>
-    <a href="services.html" class="btn secondary">Explore Services</a>
-  </div>
+        <span class="hero-tag">
+            WELCOME TO E-MAX CYBER CAFE
+        </span>
 
-  <div class="hero-card">
-    <div class="orb">E</div>
-    <h2>E-MAX DIGITAL DESK</h2>
-    <p>Your trusted digital assistance point.</p>
-    <div class="status">● SERVICES AVAILABLE</div>
-  </div>
+        <h1>
+            Your Digital World,<br>
+            <span>Made Simple.</span>
+        </h1>
+
+        <p>
+            One Place. Multiple Digital Solutions.
+            Get assistance with online applications,
+            documentation, PAN services, scholarship forms,
+            printing and many more digital services.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="./services.html" class="btn">
+                Explore All Services →
+            </a>
+
+            <a href="./booking.html" class="btn btn-outline">
+                Book Your Visit
+            </a>
+
+        </div>
+
+    </div>
 </section>
 
-<section class="stats">
-  <div><h2>11</h2><p>Website Pages</p></div>
-  <div><h2>20+</h2><p>Digital Tasks</p></div>
-  <div><h2>100%</h2><p>Customer Focus</p></div>
-  <div><h2>24/7</h2><p>WhatsApp Enquiry</p></div>
+<!-- ABOUT SECTION -->
+
+<section class="about">
+
+    <div class="section-heading">
+        <h2>About <span>E-MAX</span></h2>
+        <p>Your trusted destination for digital assistance.</p>
+    </div>
+
+    <div class="about-content">
+
+        <p>
+            E-MAX Cyber Cafe is a digital service assistance centre
+            designed to make everyday online work easier.
+            From online form filling and documentation to printing,
+            scanning and application guidance, we aim to provide
+            convenient assistance in one place.
+            Our goal is to make digital services simple and accessible.
+        </p>
+
+        <br>
+
+        <a href="./about.html" class="btn">
+            Know More About Us →
+        </a>
+
+    </div>
 </section>
+
+<!-- SERVICES SECTION -->
 
 <section class="services">
-  <div class="section-title">
-    <span>WHAT WE OFFER</span>
-    <h2>Our Popular Services</h2>
-    <p>Digital solutions for your everyday needs.</p>
-  </div>
 
-  <div class="service-grid">
-    <div class="service-card">
-      <div>🪪</div>
-      <h3>Aadhaar Services</h3>
-      <p>Aadhaar-related online assistance.</p>
+    <div class="section-heading">
+
+        <h2>Our <span>Popular Services</span></h2>
+
+        <p>
+            Explore some of the services available at E-MAX Cyber Cafe.
+        </p>
+
     </div>
 
-    <div class="service-card">
-      <div>💳</div>
-      <h3>PAN Card</h3>
-      <p>New PAN and correction assistance.</p>
+    <div class="service-grid">
+
+        <div class="service-card">
+            <div class="service-icon">🪪</div>
+            <h3>PAN Card</h3>
+            <p>PAN application guidance, correction and documentation assistance.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🆔</div>
+            <h3>Aadhaar Assistance</h3>
+            <p>Guidance for eligible Aadhaar-related services and authorised centres.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🚗</div>
+            <h3>Driving Licence</h3>
+            <p>Learning licence and driving licence application assistance.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🎓</div>
+            <h3>Scholarship Forms</h3>
+            <p>Scholarship application and online form filling assistance.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🗳️</div>
+            <h3>Voter ID</h3>
+            <p>Voter registration guidance and election card assistance.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🏦</div>
+            <h3>Banking Assistance</h3>
+            <p>General banking documentation and form assistance.</p>
+        </div>
+
     </div>
 
-    <div class="service-card">
-      <div>🗳️</div>
-      <h3>Voter ID</h3>
-      <p>Voter registration and correction guidance.</p>
+    <div style="text-align:center; margin-top:40px;">
+
+        <a href="./services.html" class="btn">
+            Explore All Services →
+        </a>
+
     </div>
 
-    <div class="service-card">
-      <div>🚘</div>
-      <h3>Driving Licence</h3>
-      <p>Licence application assistance.</p>
-    </div>
-
-    <div class="service-card">
-      <div>🎓</div>
-      <h3>Scholarship</h3>
-      <p>Student scholarship form assistance.</p>
-    </div>
-
-    <div class="service-card">
-      <div>🏦</div>
-      <h3>Banking</h3>
-      <p>Digital banking-related assistance.</p>
-    </div>
-  </div>
-
-  <a href="services.html" class="btn">View All Services →</a>
 </section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="why">
+
+    <div class="section-heading">
+
+        <h2>Why Choose <span>E-MAX?</span></h2>
+
+        <p>Convenient digital assistance for everyday needs.</p>
+
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <div class="service-icon">⚡</div>
+            <h3>Convenience</h3>
+            <p>Multiple digital assistance services at one place.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="service-icon">💻</div>
+            <h3>Digital Support</h3>
+            <p>Help with online applications and documentation.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="service-icon">📅</div>
+            <h3>Pre-Booking</h3>
+            <p>Contact us to arrange your visit in advance.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="service-icon">🤝</div>
+            <h3>Customer Assistance</h3>
+            <p>Get guidance for the digital work you need.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BOOKING CTA -->
 
 <section class="cta">
-  <h2>Need Digital Assistance?</h2>
-  <p>Book your visit and save time.</p>
-  <a href="booking.html" class="btn">Pre-book Now</a>
+
+    <h2>Ready to Get Your <span>Work Done?</span></h2>
+
+    <p>
+        Plan your visit to E-MAX Cyber Cafe.
+        Contact us for service details and booking assistance.
+    </p>
+
+    <a href="./booking.html" class="btn">
+        Book Your Visit →
+    </a>
+
 </section>
 
+<!-- FOOTER -->
+
 <footer>
-  <h2>E-MAX CYBER CAFE</h2>
-  <p>One Place. Multiple Digital Solutions.</p>
-  <p>Contact: 9099212666</p>
-  <p>© 2026 E-MAX. All Rights Reserved.</p>
+
+    <div class="footer-grid">
+
+        <div>
+            <h3>E-MAX CYBER CAFE</h3>
+            <p>One Place. Multiple Digital Solutions.</p>
+            <p>Your digital assistance destination.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <p><a href="./index.html">Home</a></p>
+            <p><a href="./about.html">About Us</a></p>
+            <p><a href="./services.html">All Services</a></p>
+            <p><a href="./booking.html">Pre-Booking</a></p>
+            <p><a href="./contact.html">Contact</a></p>
+        </div>
+
+        <div>
+            <h3>Contact Us</h3>
+            <p>Phone: <a href="tel:+919099212666">9099212666</a></p>
+            <p>
+                WhatsApp:
+                <a href="https://wa.me/919099212666" target="_blank">
+                    Chat With Us
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 E-MAX Cyber Cafe. All Rights Reserved.
+    </div>
+
 </footer>
 
-<a class="whatsapp"
-href="https://wa.me/919099212666"
-target="_blank">☏</a>
+<!-- FLOATING WHATSAPP BUTTON -->
 
-<script src="script.js"></script>
+<a class="whatsapp"
+   href="https://wa.me/919099212666?text=Hello%20E-MAX%2C%20I%20need%20assistance."
+   target="_blank">
+   WhatsApp
+</a>
+
 </body>
 </html>

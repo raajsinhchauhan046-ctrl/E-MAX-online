@@ -288,3 +288,59 @@ footer {
   .hero-card { width: 100%; }
   .section-title h2 { font-size: 30px; }
 }
+
+.booking-box {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 35px;
+    background: linear-gradient(145deg, #10243d, #081426);
+    border: 1px solid #00d9ff55;
+    border-radius: 22px;
+    box-shadow: 0 15px 45px #0005;
+}
+
+.booking-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.booking-heading span {
+    color: #00d9ff;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.booking-heading h2 {
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.booking-heading p {
+    color: #9fb4cc;
+    line-height: 1.6;
+}
+
+.booking-submit {
+    width: 100%;
+    padding: 16px;
+    color: #04101e;
+    background: linear-gradient(100deg, #00d9ff, #008cff);
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.booking-submit:hover {
+    box-shadow: 0 0 25px #00d9ff66;
+    transform: translateY(-3px);
+}
+
+@media(max-width:600px) {
+    .booking-box {
+        padding: 22px;
+        margin: 25px 12px;
+    }
+}
